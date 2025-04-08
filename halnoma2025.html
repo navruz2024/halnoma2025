@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HALNOMA.TJ – Ҳалли масъалаҳо</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom, #e8f0ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }header {
+  background: linear-gradient(to right, #2e86de, #48c6ef);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.95;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #d8eafe;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: inset 0 -1px 3px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #2e86de;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 2px solid #2e86de;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2e86de;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.search-box {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.search-box input[type="text"] {
+  width: 85%;
+  max-width: 450px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.problem {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.problem:hover {
+  transform: translateY(-3px);
+}
+
+.problem h3 {
+  margin-top: 0;
+  color: #2e86de;
+  font-size: 22px;
+}
+
+.problem p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f5fb;
+  font-size: 14px;
+  color: #888;
+  margin-top: 50px;
+}
+
+  </style>
+</head>
+<body>  <header>
+    <h1>HALNOMA.TJ</h1>
+    <p>Ҳалли масъалаҳои китобҳои дарсӣ (синфҳои 7–11)</p>
+  </header>  <nav>
+    <a href="#">Синфи 7</a>
+    <a href="#">Синфи 8</a>
+    <a href="#">Синфи 9</a>
+    <a href="#">Синфи 10</a>
+    <a href="#">Синфи 11</a>
+  </nav>  <div class="container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Ҷустуҷӯи масъала...">
+    </div><div class="problem">
+  <h3>Масъала №1</h3>
+  <p><strong>Синф:</strong> 8 | <strong>Фан:</strong> Алгебра</p>
+  <p><strong>Матн:</strong> Яке аз ададҳо 3 маротиба хурдтар аз дигар аст. Ҳосили ҷамъашон 20. Ададҳоро ёбед.</p>
+  <p><strong>Ҳал:</strong> Гузорем x – адади калон, пас хурдӣ x/3. Ҷамъ: x + x/3 = 20 → 4x/3 = 20 → x = 15, хурдӣ = 5.</p>
+</div>
+
+<!-- Масъалаҳои дигар метавонанд дар оянда илова шаванд -->
+
+  </div>  <footer>
+    © 2025 HALNOMA.TJ — Ҳалли масъалаҳои дарсӣ. Ҳамаи ҳуқуқ маҳфуз аст.
+  </footer>  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("input", () => {
+      const value = input.value.toLowerCase();
+      const problems = document.querySelectorAll(".problem");
+      problems.forEach(problem => {
+        problem.style.display = problem.textContent.toLowerCase().includes(value) ? "block" : "none";
+      });
+    });
+  </script></body>
+</html>
